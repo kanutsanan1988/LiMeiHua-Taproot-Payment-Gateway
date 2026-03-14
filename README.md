@@ -1,1082 +1,657 @@
-# LiMeiHua Taproot Payment Gateway
+# LiMeiHua Taproot Assets - Comprehensive Multi-Language Documentation
 
-> ชุดซอฟต์แวร์ชุดนี้ มีไว้เพื่อเป็นโครงสร้างพื้นฐานทางการเงินยุคใหม่เพื่อรองรับการไหลของเงินจำนวนมหาศาลของท่านผู้เฒ่าหลี่เหมยฮัว หรือ LiMeiHua Grand Mother และ source code นี้สร้างโดย Mr.Kanutsanan Pongpanna (นายคณัสนันท์ พงษ์พันนา) URL:https://chatgpt.com/g/g-68d289535dec81919445deb9830f2d8e-kanutsanan-pongpanna
-
-**Lightning Network Payment Gateway for Merchants - Accept BTC, USDT, and Taproot Assets**
-
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Node.js](https://img.shields.io/badge/node.js-18%2B-green.svg)
-![React](https://img.shields.io/badge/react-18%2B-blue.svg)
+> ชุดซอฟต์แวร์ชุดนี้ มีไว้เพื่อเป็นโครงสร้างพื้นฐานทางการเงินยุคใหม่เพื่อรองรับการไหลของเงินจำนวนมหาศาลของท่านผู้เฒ่าหลี่เหมยฮัว หรือ LiMeiHua Grand Mother 
+> และ source code นี้สร้างโดย Mr.Kanutsanan Pongpanna (นายคณัสนันท์ พงษ์พันนา) 
+> URL: https://chatgpt.com/g/g-68d289535dec81919445deb9830f2d8e-kanutsanan-pongpanna
 
 ---
 
-## 📚 Documentation in Multiple Languages
+## 📖 Table of Contents
 
-- **[ไทย (Thai)](#ไทย)** | **[English](#english)** | **[中文 (Chinese)](#中文简体)** | **[日本語 (Japanese)](#日本語)** | **[한국어 (Korean)](#한국어)** | **[Español (Spanish)](#español)** | **[Français (French)](#français)** | **[Deutsch (German)](#deutsch)** | **[Português (Portuguese)](#português)** | **[Русский (Russian)](#русский)** | **[العربية (Arabic)](#العربية)** | **[हिन्दी (Hindi)](#हिन्दी)** | **[Tiếng Việt (Vietnamese)](#tiếng-việt)** | **[Bahasa Indonesia (Indonesian)](#bahasa-indonesia)** | **[Bahasa Melayu (Malay)](#bahasa-melayu)** | **[Türkçe (Turkish)](#türkçe)** | **[Italiano (Italian)](#italiano)** | **[Nederlands (Dutch)](#nederlands)** | **[Polski (Polish)](#polski)** | **[Svenska (Swedish)](#svenska)** | **[Українська (Ukrainian)](#українська)** | **[Čeština (Czech)](#čeština)** | **[Română (Romanian)](#română)** | **[Ελληνικά (Greek)](#ελληνικά)** | **[עברית (Hebrew)](#עברית)** | **[বাংলা (Bengali)](#বাংলা)** | **[Filipino (Tagalog)](#filipino)** | **[Kiswahili (Swahili)](#kiswahili)**
-
----
-
-## ไทย
-
-### ภาพรวม
-
-LiMeiHua Taproot Payment Gateway เป็นระบบชำระเงินออนไลน์ที่ช่วยให้ร้านค้าออนไลน์สามารถรับชำระเงินด้วย Bitcoin, USDT และ Taproot Assets tokens ผ่าน Lightning Network ได้อย่างง่ายดาย
-
-### ฟีเจอร์หลัก
-
-- 💰 **รองรับหลายสกุลเงิน** - BTC, USDT, Taproot Assets tokens
-- ⚡ **Lightning Network** - ชำระเงินได้เร็ว ค่าธรรมชาติต่ำ
-- 🎯 **ใช้งานง่าย** - Dashboard สำหรับจัดการ invoices
-- 📊 **สถิติครบถ้วน** - ดูรายได้, จำนวน invoice, สถานะการชำระ
-- 🔒 **ปลอดภัย** - API key authentication, webhook support
-- 📱 **Responsive** - ใช้ได้บนมือถือและเดสก์ทอป
-
-### การติดตั้ง
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### การใช้งาน
-
-1. ลงทะเบียนร้านค้า (Register Store)
-2. สร้าง invoice ใหม่
-3. ผู้ซื้อสแกน QR code หรือส่ง BTC/USDT ไปที่ payment address
-4. ระบบจะยืนยันการชำระเงินโดยอัตโนมัติ
-5. ดูประวัติการชำระเงินใน dashboard
+- [🌐 Available Languages](#-available-languages)
+- [📚 Documentation by Language](#-documentation-by-language)
+- [🎯 Project Overview](#-project-overview)
+- [✨ Features](#-features)
+- [🚀 Getting Started](#-getting-started)
+- [💡 Use Cases](#-use-cases)
+- [🔧 Technical Stack](#-technical-stack)
+- [📊 Language Statistics](#-language-statistics)
 
 ---
 
-## English
+## 🌐 Available Languages
 
-### Overview
+This project supports **40+ languages** across multiple regions:
 
-LiMeiHua Taproot Payment Gateway is an online payment system that allows merchants to accept payments in Bitcoin, USDT, and Taproot Assets tokens through the Lightning Network with ease.
+### ASEAN Region (9 Languages)
+🇹🇭 Thai | 🇱🇦 Lao | 🇲🇲 Burmese | 🇻🇳 Vietnamese | 🇰🇭 Khmer | 🇲🇾 Malay | 🇮🇩 Indonesian | 🇵🇭 Filipino | 🇱🇰 Tamil
 
-### Key Features
+### Other Regions (5 Languages)
+🇷🇺 Russian | 🇲🇳 Mongolian | 🇱🇰 Sinhala | 🇧🇹 Dzongkha | 🇳🇵 Nepali
 
-- 💰 **Multi-Currency Support** - BTC, USDT, Taproot Assets tokens
-- ⚡ **Lightning Network** - Fast payments, low fees
-- 🎯 **Easy to Use** - Dashboard for invoice management
-- 📊 **Complete Statistics** - Revenue, invoices, payment status
-- 🔒 **Secure** - API key authentication, webhook support
-- 📱 **Responsive** - Works on mobile and desktop
+### India (21 Languages)
+🇮🇳 Hindi | Bengali | Telugu | Marathi | Tamil | Urdu | Gujarati | Kannada | Malayalam | Odia | Punjabi | Assamese | Maithili | Santali | Kashmiri | Nepali | Sindhi | Dogri | Manipuri | Bodo | Konkani
 
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Usage
-
-1. Register your store
-2. Create a new invoice
-3. Customer scans QR code or sends BTC/USDT to payment address
-4. System automatically confirms payment
-5. View payment history in dashboard
+### Global (20+ Languages)
+🌍 English | 🇨🇳 Chinese (Simplified & Traditional) | 🇯🇵 Japanese | 🇰🇷 Korean | 🇪🇸 Spanish | 🇫🇷 French | 🇩🇪 German | 🇵🇹 Portuguese | 🇸🇦 Arabic | 🇹🇷 Turkish | 🇮🇹 Italian | 🇳🇱 Dutch | 🇵🇱 Polish | 🇸🇪 Swedish | 🇺🇦 Ukrainian | 🇨🇿 Czech | 🇷🇴 Romanian | 🇬🇷 Greek | 🇮🇱 Hebrew | 🇹🇿 Swahili
 
 ---
 
-## 中文简体
+## 📚 Documentation by Language
 
-### 概述
+### English Documentation
+**LiMeiHua Taproot Assets** is a modern financial infrastructure platform designed to support massive money flow for LiMeiHua Grand Mother. This comprehensive system enables users to create, manage, and trade Taproot Assets tokens on the Bitcoin Lightning Network.
 
-LiMeiHua Taproot Payment Gateway 是一个在线支付系统，允许商家通过闪电网络轻松接受比特币、USDT 和 Taproot Assets 代币付款。
+**Key Features:**
+- Create custom Taproot Assets tokens with flexible parameters
+- Manage token supply (fixed, mintable, or burnable)
+- Calculate gas fees and transaction costs
+- Send and receive tokens on Lightning Network
+- Multi-platform support (Web, Mobile, Desktop)
+- World ID integration for enhanced security
+- Airdrop distribution system
+- Payment gateway integration
+- Lightning Node management
 
-### 主要功能
-
-- 💰 **多币种支持** - BTC、USDT、Taproot Assets 代币
-- ⚡ **闪电网络** - 快速支付、低费用
-- 🎯 **易于使用** - 发票管理仪表板
-- 📊 **完整统计** - 收入、发票、支付状态
-- 🔒 **安全** - API 密钥认证、Webhook 支持
-- 📱 **响应式** - 支持移动和桌面
-
-### 安装
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 使用方法
-
-1. 注册您的商店
-2. 创建新发票
-3. 客户扫描二维码或向支付地址发送 BTC/USDT
-4. 系统自动确认付款
-5. 在仪表板中查看付款历史
+**Getting Started:**
+1. Visit the platform or install the application
+2. Connect your Lightning Network wallet
+3. Create your first Taproot Assets token
+4. Start managing your digital assets
 
 ---
 
-## 日本語
+### ไทย (Thai Documentation)
+**LiMeiHua Taproot Assets** เป็นแพลตฟอร์มโครงสร้างพื้นฐานทางการเงินสมัยใหม่ที่ออกแบบมาเพื่อรองรับการไหลของเงินจำนวนมหาศาลของท่านผู้เฒ่าหลี่เหมยฮัว ระบบที่ครอบคลุมนี้ช่วยให้ผู้ใช้สามารถสร้าง จัดการ และซื้อขาย Taproot Assets tokens บน Bitcoin Lightning Network
 
-### 概要
+**ฟีเจอร์หลัก:**
+- สร้าง Taproot Assets tokens ที่กำหนดเองได้
+- จัดการปริมาณ token (fixed, mintable, burnable)
+- คำนวณค่าแก๊สและค่าธุรกรรม
+- ส่งและรับ tokens บน Lightning Network
+- รองรับหลายแพลตฟอร์ม (Web, Mobile, Desktop)
+- บูรณาการ World ID เพื่อความปลอดภัยที่ดีขึ้น
+- ระบบแจกจ่าย Airdrop
+- บูรณาการ Payment Gateway
+- จัดการ Lightning Node
 
-LiMeiHua Taproot Payment Gateway は、マーチャントがライトニングネットワークを通じてビットコイン、USDT、Taproot Assets トークンでの支払いを簡単に受け入れることができるオンライン決済システムです。
-
-### 主な機能
-
-- 💰 **マルチ通貨対応** - BTC、USDT、Taproot Assets トークン
-- ⚡ **ライトニングネットワーク** - 高速決済、低手数料
-- 🎯 **使いやすい** - インボイス管理ダッシュボード
-- 📊 **完全な統計** - 収益、インボイス、支払いステータス
-- 🔒 **安全** - API キー認証、Webhook サポート
-- 📱 **レスポンシブ** - モバイルとデスクトップで動作
-
-### インストール
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 使用方法
-
-1. ストアを登録
-2. 新しいインボイスを作成
-3. 顧客が QR コードをスキャンまたは支払いアドレスに BTC/USDT を送信
-4. システムが支払いを自動確認
-5. ダッシュボードで支払い履歴を表示
+**เริ่มต้นใช้งาน:**
+1. เยี่ยมชมแพลตฟอร์มหรือติดตั้งแอปพลิเคชัน
+2. เชื่อมต่อ Lightning Network wallet ของคุณ
+3. สร้าง Taproot Assets token แรกของคุณ
+4. เริ่มจัดการสินทรัพย์ดิจิทัลของคุณ
 
 ---
 
-## 한국어
+### ລາວ (Lao Documentation)
+**LiMeiHua Taproot Assets** ແມ່ນແພັດຟອມໂຄງສ້າງພື້ນຖານດ້ານການເງິນສະໄໝໃໝ່ທີ່ອອກແບບມາເພື່ອສະໜັບສະໜູນການໄຫຼຂອງເງິນຈໍານວນຫຼວງຫຼາຍສໍາລັບທ່ານຜູ້ເຖົ້າຫລີ່ເຫມຍຮວົ (LiMeiHua Grand Mother)
 
-### 개요
-
-LiMeiHua Taproot Payment Gateway는 상인이 라이트닝 네트워크를 통해 비트코인, USDT 및 Taproot Assets 토큰으로 결제를 쉽게 받을 수 있는 온라인 결제 시스템입니다.
-
-### 주요 기능
-
-- 💰 **다중 통화 지원** - BTC, USDT, Taproot Assets 토큰
-- ⚡ **라이트닝 네트워크** - 빠른 결제, 낮은 수수료
-- 🎯 **사용하기 쉬움** - 송장 관리 대시보드
-- 📊 **완전한 통계** - 수익, 송장, 결제 상태
-- 🔒 **안전** - API 키 인증, Webhook 지원
-- 📱 **반응형** - 모바일 및 데스크톱에서 작동
-
-### 설치
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 사용 방법
-
-1. 스토어 등록
-2. 새 송장 작성
-3. 고객이 QR 코드를 스캔하거나 결제 주소로 BTC/USDT 전송
-4. 시스템이 자동으로 결제 확인
-5. 대시보드에서 결제 내역 보기
+**ຄຸນສົມບັດຫຼັກ:**
+- ສ້າງ Taproot Assets tokens ທີ່ກໍາຫນົດເອງໄດ້
+- ຈັດການປະລິມານ token (fixed, mintable, burnable)
+- ຄໍານວນຄ່າແກ໊ສແລະຄ່າທຸລະກໍາ
+- ສົ່ງແລະຮັບ tokens ໃນ Lightning Network
+- ສະໜັບສະໜູນຫຼາຍແພັດຟອມ (Web, Mobile, Desktop)
+- ປະສົມປະສານ World ID ສໍາລັບຄວາມປອດໄພທີ່ດີຂຶ້ນ
+- ລະບົບແຈກຢາຍ Airdrop
+- ປະສົມປະສານ Payment Gateway
+- ຈັດການ Lightning Node
 
 ---
 
-## Español
+### မြန်မာ (Burmese Documentation)
+**LiMeiHua Taproot Assets** သည် LiMeiHua Grand Mother အတွက် 거대한ငွေ့စီးဆင်းမှုကို ထောက်ခံရန် ဒီဇိုင်းထုတ်ထားသော ခေတ်သစ် ငွေကြေးအခြေခံ ကွန်ပ်ျူတာ ပလက်ဖောင်းဖြစ်သည်။
 
-### Descripción General
-
-LiMeiHua Taproot Payment Gateway es un sistema de pago en línea que permite a los comerciantes aceptar pagos en Bitcoin, USDT y tokens de Taproot Assets a través de la Red Lightning con facilidad.
-
-### Características Principales
-
-- 💰 **Soporte Multimoneda** - BTC, USDT, tokens de Taproot Assets
-- ⚡ **Red Lightning** - Pagos rápidos, tarifas bajas
-- 🎯 **Fácil de Usar** - Panel de control de gestión de facturas
-- 📊 **Estadísticas Completas** - Ingresos, facturas, estado de pago
-- 🔒 **Seguro** - Autenticación de clave API, soporte de Webhook
-- 📱 **Responsivo** - Funciona en dispositivos móviles y de escritorio
-
-### Instalación
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Uso
-
-1. Registre su tienda
-2. Crear nueva factura
-3. El cliente escanea el código QR o envía BTC/USDT a la dirección de pago
-4. El sistema confirma automáticamente el pago
-5. Ver historial de pagos en el panel de control
+**အဓိက ဝိသေသလက္ခဏာများ:**
+- စိတ်ကြိုက် Taproot Assets tokens များ ဖန်တီးခြင်း
+- Token ပမာណ ကိုင်တွယ်ခြင်း (fixed, mintable, burnable)
+- ဂ်ဆ ကုန်ကျစရိတ် တွက်ချက်ခြင်း
+- Lightning Network တွင် tokens ပို့ခြင်း နှင့် လက်ခံခြင်း
+- အများအပြား ပလက်ဖောင်း ထောက်ခံခြင်း (Web, Mobile, Desktop)
+- ကောင်းမွန်သော လုံခြုံရေးအတွက် World ID ပေါင်းစပ်ခြင်း
+- Airdrop ဖြန့်ဝေမှု စနစ်
+- Payment Gateway ပေါင်းစပ်ခြင်း
+- Lightning Node စီမံခန့်ခွဲခြင်း
 
 ---
 
-## Français
+### Tiếng Việt (Vietnamese Documentation)
+**LiMeiHua Taproot Assets** là một nền tảng cơ sở hạ tầng tài chính hiện đại được thiết kế để hỗ trợ dòng tiền khổng lồ cho bà LiMeiHua. Hệ thống toàn diện này cho phép người dùng tạo, quản lý và giao dịch các token Taproot Assets trên Bitcoin Lightning Network.
 
-### Aperçu
-
-LiMeiHua Taproot Payment Gateway est un système de paiement en ligne qui permet aux marchands d'accepter facilement les paiements en Bitcoin, USDT et tokens Taproot Assets via le réseau Lightning.
-
-### Caractéristiques Principales
-
-- 💰 **Support Multidevises** - BTC, USDT, tokens Taproot Assets
-- ⚡ **Réseau Lightning** - Paiements rapides, frais bas
-- 🎯 **Facile à Utiliser** - Tableau de bord de gestion des factures
-- 📊 **Statistiques Complètes** - Revenus, factures, état des paiements
-- 🔒 **Sécurisé** - Authentification par clé API, support Webhook
-- 📱 **Réactif** - Fonctionne sur mobile et bureau
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Utilisation
-
-1. Enregistrez votre magasin
-2. Créer une nouvelle facture
-3. Le client scanne le code QR ou envoie BTC/USDT à l'adresse de paiement
-4. Le système confirme automatiquement le paiement
-5. Afficher l'historique des paiements dans le tableau de bord
+**Các Tính Năng Chính:**
+- Tạo các token Taproot Assets tùy chỉnh
+- Quản lý nguồn cung token (cố định, có thể tạo, có thể đốt)
+- Tính toán phí gas và chi phí giao dịch
+- Gửi và nhận token trên Lightning Network
+- Hỗ trợ nhiều nền tảng (Web, Mobile, Desktop)
+- Tích hợp World ID để tăng cường bảo mật
+- Hệ thống phân phối Airdrop
+- Tích hợp Payment Gateway
+- Quản lý Lightning Node
 
 ---
 
-## Deutsch
+### ខ្មែរ (Khmer Documentation)
+**LiMeiHua Taproot Assets** ជាវេទិកាហិរញ្ញវត្ថុលោកទំនើបដែលត្រូវបានរចនាឡើងដើម្បីគាំទ្របរិមាណលុយដ៏ច្រើនសម្រាប់ម្ដាយលីមីហួ។ ប្រព័ន្ធលម្អិតនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត គ្រប់គ្រង និងលក់ទិញ Taproot Assets tokens នៅលើបណ្តាញ Bitcoin Lightning Network។
 
-### Überblick
-
-LiMeiHua Taproot Payment Gateway ist ein Online-Zahlungssystem, das Händlern ermöglicht, Zahlungen in Bitcoin, USDT und Taproot Assets-Token über das Lightning Network einfach zu akzeptieren.
-
-### Hauptmerkmale
-
-- 💰 **Multi-Währungs-Unterstützung** - BTC, USDT, Taproot Assets-Token
-- ⚡ **Lightning Network** - Schnelle Zahlungen, niedrige Gebühren
-- 🎯 **Benutzerfreundlich** - Rechnungsverwaltungs-Dashboard
-- 📊 **Vollständige Statistiken** - Einnahmen, Rechnungen, Zahlungsstatus
-- 🔒 **Sicher** - API-Schlüssel-Authentifizierung, Webhook-Unterstützung
-- 📱 **Responsiv** - Funktioniert auf Mobilgeräten und Desktops
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Verwendung
-
-1. Registrieren Sie Ihren Shop
-2. Neue Rechnung erstellen
-3. Kunde scannt QR-Code oder sendet BTC/USDT an Zahlungsadresse
-4. System bestätigt Zahlung automatisch
-5. Zahlungsverlauf im Dashboard anzeigen
+**លក្ខណៈពិសេសចម្បង:**
+- បង្កើត Taproot Assets tokens ដែលបានកែប្រែ
+- គ្រប់គ្រងការផ្គត់ផ្គង់ token (ថេរ មិនថេរ ឬអាចដុតបាន)
+- គណនាថ្លៃឧស្ម័ន និងថ្លៃប្រតិបត្តិការ
+- ផ្ញើ និងទទួល tokens នៅលើបណ្តាញ Lightning
+- គាំទ្របេតិកបទច្រើន (Web Mobile Desktop)
+- ការរួមបញ្ចូល World ID សម្រាប់សន្តិសុខប្រសើរ
+- ប្រព័ន្ធចែកចាយ Airdrop
+- ការរួមបញ្ចូល Payment Gateway
+- ការគ្រប់គ្រង Lightning Node
 
 ---
 
-## Português
+### Bahasa Melayu (Malay Documentation)
+**LiMeiHua Taproot Assets** ialah platform infrastruktur kewangan moden yang dirancang untuk menyokong aliran wang yang besar untuk Nenek LiMeiHua. Sistem komprehensif ini membolehkan pengguna membuat, menguruskan, dan berdagang token Taproot Assets di Rangkaian Bitcoin Lightning.
 
-### Visão Geral
-
-LiMeiHua Taproot Payment Gateway é um sistema de pagamento online que permite aos comerciantes aceitar pagamentos em Bitcoin, USDT e tokens Taproot Assets através da Rede Lightning com facilidade.
-
-### Recursos Principais
-
-- 💰 **Suporte Multimoeda** - BTC, USDT, tokens Taproot Assets
-- ⚡ **Rede Lightning** - Pagamentos rápidos, taxas baixas
-- 🎯 **Fácil de Usar** - Painel de controle de gerenciamento de faturas
-- 📊 **Estatísticas Completas** - Receita, faturas, status de pagamento
-- 🔒 **Seguro** - Autenticação de chave API, suporte Webhook
-- 📱 **Responsivo** - Funciona em dispositivos móveis e desktop
-
-### Instalação
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Uso
-
-1. Registre sua loja
-2. Criar nova fatura
-3. Cliente escaneia código QR ou envia BTC/USDT para endereço de pagamento
-4. Sistema confirma automaticamente o pagamento
-5. Ver histórico de pagamentos no painel de controle
+**Ciri-Ciri Utama:**
+- Buat token Taproot Assets tersuai
+- Urus bekalan token (tetap, boleh dicetak, boleh dibakar)
+- Kira bayaran gas dan kos transaksi
+- Hantar dan terima token di Rangkaian Lightning
+- Sokongan berbilang platform (Web, Mobile, Desktop)
+- Integrasi World ID untuk keselamatan yang lebih baik
+- Sistem pengedaran Airdrop
+- Integrasi Payment Gateway
+- Pengurusan Lightning Node
 
 ---
 
-## Русский
+### Bahasa Indonesia (Indonesian Documentation)
+**LiMeiHua Taproot Assets** adalah platform infrastruktur keuangan modern yang dirancang untuk mendukung aliran uang besar untuk Nenek LiMeiHua. Sistem komprehensif ini memungkinkan pengguna membuat, mengelola, dan memperdagangkan token Taproot Assets di Jaringan Bitcoin Lightning.
 
-### Обзор
-
-LiMeiHua Taproot Payment Gateway - это система онлайн-платежей, которая позволяет торговцам легко принимать платежи в Bitcoin, USDT и токенах Taproot Assets через сеть Lightning.
-
-### Основные возможности
-
-- 💰 **Поддержка нескольких валют** - BTC, USDT, токены Taproot Assets
-- ⚡ **Сеть Lightning** - Быстрые платежи, низкие комиссии
-- 🎯 **Простота использования** - Панель управления счетами
-- 📊 **Полная статистика** - Доход, счета, статус платежа
-- 🔒 **Безопасность** - Аутентификация по ключу API, поддержка Webhook
-- 📱 **Адаптивный дизайн** - Работает на мобильных устройствах и ПК
-
-### Установка
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Использование
-
-1. Зарегистрируйте свой магазин
-2. Создать новый счет
-3. Клиент сканирует QR-код или отправляет BTC/USDT на адрес платежа
-4. Система автоматически подтверждает платеж
-5. Просмотр истории платежей на панели управления
+**Fitur Utama:**
+- Buat token Taproot Assets yang dapat disesuaikan
+- Kelola pasokan token (tetap, dapat dicetak, dapat dibakar)
+- Hitung biaya gas dan biaya transaksi
+- Kirim dan terima token di Jaringan Lightning
+- Dukungan multi-platform (Web, Mobile, Desktop)
+- Integrasi World ID untuk keamanan yang lebih baik
+- Sistem distribusi Airdrop
+- Integrasi Payment Gateway
+- Manajemen Lightning Node
 
 ---
 
-## العربية
+### Filipino (Filipino Documentation)
+**LiMeiHua Taproot Assets** ay isang modernong platform ng financial infrastructure na dinisenyo upang suportahan ang malaking daloy ng pera para sa LiMeiHua Grand Mother. Ang komprehensibong sistemang ito ay nagbibigay-daan sa mga user na lumikha, pamahalaan, at magbenta ng Taproot Assets tokens sa Bitcoin Lightning Network.
 
-### نظرة عامة
-
-LiMeiHua Taproot Payment Gateway هو نظام دفع عبر الإنترنت يسمح للتجار بقبول المدفوعات بسهولة بعملات البيتكوين و USDT وتوكنات Taproot Assets عبر شبكة Lightning.
-
-### الميزات الرئيسية
-
-- 💰 **دعم العملات المتعددة** - BTC و USDT وتوكنات Taproot Assets
-- ⚡ **شبكة Lightning** - دفع سريع وأسعار منخفضة
-- 🎯 **سهل الاستخدام** - لوحة تحكم إدارة الفواتير
-- 📊 **إحصائيات شاملة** - الإيرادات والفواتير وحالة الدفع
-- 🔒 **آمن** - مصادقة مفتاح API ودعم Webhook
-- 📱 **سريع الاستجابة** - يعمل على الأجهزة المحمولة وأجهزة سطح المكتب
-
-### التثبيت
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### الاستخدام
-
-1. تسجيل متجرك
-2. إنشاء فاتورة جديدة
-3. يقوم العميل بمسح رمز الاستجابة السريعة أو إرسال BTC/USDT إلى عنوان الدفع
-4. يؤكد النظام الدفع تلقائياً
-5. عرض سجل الدفع في لوحة التحكم
+**Pangunahing Mga Katangian:**
+- Lumikha ng mga customized Taproot Assets tokens
+- Pamahalaan ang supply ng token (fixed, mintable, burnable)
+- Kalkulahin ang gas fees at transaction costs
+- Magpadala at makatanggap ng tokens sa Lightning Network
+- Suporta sa maraming platform (Web, Mobile, Desktop)
+- Pagsasama ng World ID para sa mas magandang seguridad
+- Sistema ng Airdrop distribution
+- Pagsasama ng Payment Gateway
+- Pamamahala ng Lightning Node
 
 ---
 
-## हिन्दी
+### தமிழ் (Tamil Documentation)
+**LiMeiHua Taproot Assets** என்பது LiMeiHua Grand Mother க்கான பெரிய பணப்புழக்கத்தை ஆதரிக்க வடிவமைக்கப்பட்ட ஒரு நவீன நிதி உள்கட்டமைப்பு தளம். இந்த விரிவான அமைப்பு பயனர்களை Taproot Assets டோக்கன்களை உருவாக்க, நிர்வகிக்க மற்றும் Bitcoin Lightning Network இல் வர்த்தகம் செய்ய அனுமதிக்கிறது.
 
-### अवलोकन
-
-LiMeiHua Taproot Payment Gateway एक ऑनलाइन भुगतान प्रणाली है जो व्यापारियों को लाइटनिंग नेटवर्क के माध्यम से बिटकॉइन, USDT और Taproot Assets टोकन में भुगतान आसानी से स्वीकार करने की अनुमति देता है।
-
-### मुख्य विशेषताएं
-
-- 💰 **बहु-मुद्रा समर्थन** - BTC, USDT, Taproot Assets टोकन
-- ⚡ **लाइटनिंग नेटवर्क** - तेजी से भुगतान, कम शुल्क
-- 🎯 **उपयोग में आसान** - चालान प्रबंधन डैशबोर्ड
-- 📊 **संपूर्ण आंकड़े** - राजस्व, चालान, भुगतान स्थिति
-- 🔒 **सुरक्षित** - API कुंजी प्रमाणीकरण, Webhook समर्थन
-- 📱 **प्रतिक्रियाशील** - मोबाइल और डेस्कटॉप पर काम करता है
-
-### इंस्टॉलेशन
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### उपयोग
-
-1. अपनी दुकान पंजीकृत करें
-2. नया चालान बनाएं
-3. ग्राहक QR कोड स्कैन करता है या भुगतान पते पर BTC/USDT भेजता है
-4. सिस्टम स्वचालित रूप से भुगतान की पुष्टि करता है
-5. डैशबोर्ड में भुगतान इतिहास देखें
+**முக்கிய அம்சங்கள்:**
+- தனிப்பயனாக்கப்பட்ட Taproot Assets டோக்கன்களை உருவாக்கவும்
+- டோக்கன் விநியோகத்தை நிர்வகிக்கவும் (நிலையான, மிண்டபல், எரியக்கூடிய)
+- வாயு கட்டணம் மற்றும் பரிவர்த்தனை செலவுகளைக் கணக்கிடவும்
+- Lightning Network இல் டோக்கன்களை அனுப்பி பெறவும்
+- பல-தளம் ஆதரவு (Web, Mobile, Desktop)
+- சிறந்த பாதுகாப்பிற்கான World ID ஒருங்கிணைப்பு
+- Airdrop விநியோக அமைப்பு
+- Payment Gateway ஒருங்கிணைப்பு
+- Lightning Node நிர்வாகம்
 
 ---
 
-## Tiếng Việt
+### Русский (Russian Documentation)
+**LiMeiHua Taproot Assets** - это современная платформа финансовой инфраструктуры, разработанная для поддержки огромного потока денежных средств для бабушки LiMeiHua. Эта комплексная система позволяет пользователям создавать, управлять и торговать токенами Taproot Assets в сети Bitcoin Lightning Network.
 
-### Tổng Quan
-
-LiMeiHua Taproot Payment Gateway là một hệ thống thanh toán trực tuyến cho phép các thương nhân dễ dàng chấp nhận thanh toán bằng Bitcoin, USDT và mã thông báo Taproot Assets thông qua Mạng Lightning.
-
-### Các Tính Năng Chính
-
-- 💰 **Hỗ Trợ Đa Tiền Tệ** - BTC, USDT, mã thông báo Taproot Assets
-- ⚡ **Mạng Lightning** - Thanh toán nhanh, phí thấp
-- 🎯 **Dễ Sử Dụng** - Bảng điều khiển quản lý hóa đơn
-- 📊 **Thống Kê Đầy Đủ** - Doanh thu, hóa đơn, trạng thái thanh toán
-- 🔒 **An Toàn** - Xác thực khóa API, hỗ trợ Webhook
-- 📱 **Đáp Ứng** - Hoạt động trên thiết bị di động và máy tính để bàn
-
-### Cài Đặt
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Cách Sử Dụng
-
-1. Đăng ký cửa hàng của bạn
-2. Tạo hóa đơn mới
-3. Khách hàng quét mã QR hoặc gửi BTC/USDT đến địa chỉ thanh toán
-4. Hệ thống tự động xác nhận thanh toán
-5. Xem lịch sử thanh toán trong bảng điều khiển
+**Основные возможности:**
+- Создание пользовательских токенов Taproot Assets
+- Управление предложением токенов (фиксированное, чеканка, сжигание)
+- Расчет комиссий за газ и стоимости транзакций
+- Отправка и получение токенов в сети Lightning Network
+- Поддержка нескольких платформ (Web, Mobile, Desktop)
+- Интеграция World ID для повышенной безопасности
+- Система распределения Airdrop
+- Интеграция Payment Gateway
+- Управление узлом Lightning
 
 ---
 
-## Bahasa Indonesia
+### हिन्दी (Hindi Documentation)
+**LiMeiHua Taproot Assets** एक आधुनिक वित्तीय बुनियादी ढांचा मंच है जो LiMeiHua Grand Mother के लिए भारी मात्रा में धन प्रवाह का समर्थन करने के लिए डिज़ाइन किया गया है। यह व्यापक प्रणाली उपयोगकर्ताओं को Taproot Assets टोकन बनाने, प्रबंधित करने और Bitcoin Lightning Network पर व्यापार करने की अनुमति देती है।
 
-### Ikhtisar
-
-LiMeiHua Taproot Payment Gateway adalah sistem pembayaran online yang memungkinkan pedagang menerima pembayaran dalam Bitcoin, USDT, dan token Taproot Assets melalui Jaringan Lightning dengan mudah.
-
-### Fitur Utama
-
-- 💰 **Dukungan Multi-Mata Uang** - BTC, USDT, token Taproot Assets
-- ⚡ **Jaringan Lightning** - Pembayaran cepat, biaya rendah
-- 🎯 **Mudah Digunakan** - Dasbor manajemen faktur
-- 📊 **Statistik Lengkap** - Pendapatan, faktur, status pembayaran
-- 🔒 **Aman** - Autentikasi kunci API, dukungan Webhook
-- 📱 **Responsif** - Bekerja di perangkat seluler dan desktop
-
-### Instalasi
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Penggunaan
-
-1. Daftarkan toko Anda
-2. Buat faktur baru
-3. Pelanggan memindai kode QR atau mengirim BTC/USDT ke alamat pembayaran
-4. Sistem secara otomatis mengonfirmasi pembayaran
-5. Lihat riwayat pembayaran di dasbor
+**मुख्य विशेषताएं:**
+- कस्टमाइज़्ड Taproot Assets टोकन बनाएं
+- टोकन आपूर्ति प्रबंधित करें (निश्चित, मिंटेबल, बर्नेबल)
+- गैस शुल्क और लेनदेन लागत की गणना करें
+- Lightning Network पर टोकन भेजें और प्राप्त करें
+- मल्टी-प्लेटफॉर्म समर्थन (Web, Mobile, Desktop)
+- बेहतर सुरक्षा के लिए World ID एकीकरण
+- Airdrop वितरण प्रणाली
+- Payment Gateway एकीकरण
+- Lightning Node प्रबंधन
 
 ---
 
-## Bahasa Melayu
+### 中文 (Chinese Simplified Documentation)
+**LiMeiHua Taproot Assets** 是一个现代金融基础设施平台，旨在为李美华奶奶支持大规模资金流动。这个综合系统使用户能够在比特币闪电网络上创建、管理和交易 Taproot Assets 代币。
 
-### Gambaran Keseluruhan
-
-LiMeiHua Taproot Payment Gateway adalah sistem pembayaran dalam talian yang membolehkan peniaga menerima pembayaran dalam Bitcoin, USDT, dan token Taproot Assets melalui Rangkaian Lightning dengan mudah.
-
-### Ciri-Ciri Utama
-
-- 💰 **Sokongan Pelbagai Mata Wang** - BTC, USDT, token Taproot Assets
-- ⚡ **Rangkaian Lightning** - Pembayaran cepat, yuran rendah
-- 🎯 **Mudah Digunakan** - Papan pemuka pengurusan invois
-- 📊 **Statistik Lengkap** - Pendapatan, invois, status pembayaran
-- 🔒 **Selamat** - Pengesahan kunci API, sokongan Webhook
-- 📱 **Responsif** - Berfungsi di peranti mudah alih dan desktop
-
-### Pemasangan
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Penggunaan
-
-1. Daftarkan kedai Anda
-2. Buat invois baru
-3. Pelanggan mengimbas kod QR atau menghantar BTC/USDT ke alamat pembayaran
-4. Sistem secara automatik mengesahkan pembayaran
-5. Lihat sejarah pembayaran dalam papan pemuka
+**主要功能：**
+- 创建自定义 Taproot Assets 代币
+- 管理代币供应（固定、可铸造、可销毁）
+- 计算燃气费和交易成本
+- 在闪电网络上发送和接收代币
+- 多平台支持（Web、Mobile、Desktop）
+- World ID 集成以增强安全性
+- Airdrop 分发系统
+- Payment Gateway 集成
+- Lightning Node 管理
 
 ---
 
-## Türkçe
+### 日本語 (Japanese Documentation)
+**LiMeiHua Taproot Assets** は、李美華おばあちゃんのための大規模な資金流を支援するために設計された最新の金融インフラストラクチャプラットフォームです。この包括的なシステムにより、ユーザーはビットコインライトニングネットワーク上で Taproot Assets トークンを作成、管理、および取引できます。
 
-### Genel Bakış
-
-LiMeiHua Taproot Payment Gateway, tüccarların Bitcoin, USDT ve Taproot Assets jetonlarında Lightning Network aracılığıyla kolayca ödeme kabul etmesine olanak sağlayan bir çevrimiçi ödeme sistemidir.
-
-### Temel Özellikler
-
-- 💰 **Çok Para Birimi Desteği** - BTC, USDT, Taproot Assets jetonları
-- ⚡ **Lightning Network** - Hızlı ödemeler, düşük ücretler
-- 🎯 **Kullanımı Kolay** - Fatura yönetimi panosu
-- 📊 **Tam İstatistikler** - Gelir, faturalar, ödeme durumu
-- 🔒 **Güvenli** - API anahtarı kimlik doğrulaması, Webhook desteği
-- 📱 **Duyarlı** - Mobil ve masaüstü cihazlarda çalışır
-
-### Kurulum
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Kullanım
-
-1. Mağazanızı kaydedin
-2. Yeni fatura oluşturun
-3. Müşteri QR kodunu tarar veya ödeme adresine BTC/USDT gönderir
-4. Sistem otomatik olarak ödemeyi onaylar
-5. Panoda ödeme geçmişini görüntüleyin
+**主な機能：**
+- カスタマイズされた Taproot Assets トークンを作成
+- トークン供給を管理（固定、ミント可能、バーン可能）
+- ガス代と取引コストを計算
+- ライトニングネットワークでトークンを送受信
+- マルチプラットフォーム対応（Web、Mobile、Desktop）
+- セキュリティ強化のための World ID 統合
+- Airdrop 配布システム
+- Payment Gateway 統合
+- Lightning Node 管理
 
 ---
 
-## Italiano
+### 한국어 (Korean Documentation)
+**LiMeiHua Taproot Assets** 는 이미화 할머니를 위한 대규모 자금 흐름을 지원하기 위해 설계된 현대적 금융 인프라 플랫폼입니다. 이 포괄적인 시스템을 통해 사용자는 비트코인 라이트닝 네트워크에서 Taproot Assets 토큰을 생성, 관리 및 거래할 수 있습니다.
 
-### Panoramica
-
-LiMeiHua Taproot Payment Gateway è un sistema di pagamento online che consente ai commercianti di accettare facilmente pagamenti in Bitcoin, USDT e token Taproot Assets tramite la Rete Lightning.
-
-### Caratteristiche Principali
-
-- 💰 **Supporto Multi-Valuta** - BTC, USDT, token Taproot Assets
-- ⚡ **Rete Lightning** - Pagamenti veloci, commissioni basse
-- 🎯 **Facile da Usare** - Pannello di controllo per la gestione delle fatture
-- 📊 **Statistiche Complete** - Ricavi, fatture, stato dei pagamenti
-- 🔒 **Sicuro** - Autenticazione della chiave API, supporto Webhook
-- 📱 **Reattivo** - Funziona su dispositivi mobili e desktop
-
-### Installazione
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Utilizzo
-
-1. Registra il tuo negozio
-2. Crea una nuova fattura
-3. Il cliente scansiona il codice QR o invia BTC/USDT all'indirizzo di pagamento
-4. Il sistema conferma automaticamente il pagamento
-5. Visualizza la cronologia dei pagamenti nel pannello di controllo
+**주요 기능:**
+- 맞춤형 Taproot Assets 토큰 생성
+- 토큰 공급 관리 (고정, 발행 가능, 소각 가능)
+- 가스 수수료 및 거래 비용 계산
+- 라이트닝 네트워크에서 토큰 송수신
+- 다중 플랫폼 지원 (Web, Mobile, Desktop)
+- 향상된 보안을 위한 World ID 통합
+- Airdrop 배포 시스템
+- Payment Gateway 통합
+- Lightning Node 관리
 
 ---
 
-## Nederlands
+### Español (Spanish Documentation)
+**LiMeiHua Taproot Assets** es una plataforma moderna de infraestructura financiera diseñada para apoyar el flujo masivo de dinero para la abuela LiMeiHua. Este sistema integral permite a los usuarios crear, gestionar e intercambiar tokens Taproot Assets en la red Bitcoin Lightning Network.
 
-### Overzicht
-
-LiMeiHua Taproot Payment Gateway is een online betalingssysteem waarmee handelaren eenvoudig betalingen in Bitcoin, USDT en Taproot Assets-tokens via het Lightning Network kunnen accepteren.
-
-### Hoofdfuncties
-
-- 💰 **Ondersteuning voor Meerdere Valuta's** - BTC, USDT, Taproot Assets-tokens
-- ⚡ **Lightning Network** - Snelle betalingen, lage kosten
-- 🎯 **Gemakkelijk te Gebruiken** - Factuurbeheerdashboard
-- 📊 **Volledige Statistieken** - Inkomsten, facturen, betalingsstatus
-- 🔒 **Veilig** - API-sleutelauthenticatie, Webhook-ondersteuning
-- 📱 **Responsief** - Werkt op mobiele apparaten en desktops
-
-### Installatie
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Gebruik
-
-1. Registreer uw winkel
-2. Maak een nieuwe factuur
-3. Klant scant QR-code of stuurt BTC/USDT naar betalingsadres
-4. Systeem bevestigt betaling automatisch
-5. Bekijk betalingsgeschiedenis in dashboard
+**Características principales:**
+- Crear tokens Taproot Assets personalizados
+- Gestionar el suministro de tokens (fijo, acuñable, quemable)
+- Calcular tarifas de gas y costos de transacción
+- Enviar y recibir tokens en Lightning Network
+- Soporte multiplataforma (Web, Mobile, Desktop)
+- Integración de World ID para mayor seguridad
+- Sistema de distribución de Airdrop
+- Integración de Payment Gateway
+- Gestión de Lightning Node
 
 ---
 
-## Polski
+### Français (French Documentation)
+**LiMeiHua Taproot Assets** est une plateforme d'infrastructure financière moderne conçue pour soutenir le flux massif d'argent pour la grand-mère LiMeiHua. Ce système complet permet aux utilisateurs de créer, gérer et échanger des jetons Taproot Assets sur le réseau Bitcoin Lightning Network.
 
-### Przegląd
-
-LiMeiHua Taproot Payment Gateway to system płatności online, który umożliwia handlowcom łatwe akceptowanie płatności w Bitcoin, USDT i tokenach Taproot Assets za pośrednictwem sieci Lightning.
-
-### Główne Cechy
-
-- 💰 **Obsługa Wielu Walut** - BTC, USDT, tokeny Taproot Assets
-- ⚡ **Sieć Lightning** - Szybkie płatności, niskie opłaty
-- 🎯 **Łatwe w Użyciu** - Pulpit nawigacyjny zarządzania fakturami
-- 📊 **Pełne Statystyki** - Przychody, faktury, status płatności
-- 🔒 **Bezpieczne** - Uwierzytelnianie klucza API, obsługa Webhook
-- 📱 **Responsywne** - Działa na urządzeniach mobilnych i komputerach stacjonarnych
-
-### Instalacja
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Użycie
-
-1. Zarejestruj swój sklep
-2. Utwórz nową fakturę
-3. Klient skanuje kod QR lub wysyła BTC/USDT na adres płatności
-4. System automatycznie potwierdza płatność
-5. Wyświetl historię płatności na pulpicie nawigacyjnym
+**Caractéristiques principales:**
+- Créer des jetons Taproot Assets personnalisés
+- Gérer l'approvisionnement en jetons (fixe, frappable, brûlable)
+- Calculer les frais de gaz et les coûts de transaction
+- Envoyer et recevoir des jetons sur Lightning Network
+- Support multi-plateforme (Web, Mobile, Desktop)
+- Intégration de World ID pour une sécurité renforcée
+- Système de distribution d'Airdrop
+- Intégration de Payment Gateway
+- Gestion des nœuds Lightning
 
 ---
 
-## Svenska
+### Deutsch (German Documentation)
+**LiMeiHua Taproot Assets** ist eine moderne Finanzinfrastruktur-Plattform, die entwickelt wurde, um den massiven Geldfluss für Großmutter LiMeiHua zu unterstützen. Dieses umfassende System ermöglicht es Benutzern, Taproot Assets-Token im Bitcoin Lightning Network zu erstellen, zu verwalten und zu handeln.
 
-### Översikt
-
-LiMeiHua Taproot Payment Gateway är ett onlinebetalningssystem som gör det möjligt för handlare att enkelt acceptera betalningar i Bitcoin, USDT och Taproot Assets-tokens via Lightning Network.
-
-### Huvudfunktioner
-
-- 💰 **Stöd för Flera Valutor** - BTC, USDT, Taproot Assets-tokens
-- ⚡ **Lightning Network** - Snabba betalningar, låga avgifter
-- 🎯 **Lätt att Använda** - Instrumentpanel för fakturahantering
-- 📊 **Fullständig Statistik** - Intäkter, fakturor, betalningsstatus
-- 🔒 **Säker** - API-nyckelautentisering, Webhook-stöd
-- 📱 **Responsiv** - Fungerar på mobila enheter och stationära datorer
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Användning
-
-1. Registrera din butik
-2. Skapa en ny faktura
-3. Kunden skannar QR-kod eller skickar BTC/USDT till betalningsadress
-4. Systemet bekräftar betalningen automatiskt
-5. Visa betalningshistorik i instrumentpanelen
+**Hauptmerkmale:**
+- Erstellen Sie benutzerdefinierte Taproot Assets-Token
+- Verwalten Sie das Token-Angebot (fest, prägbar, verbrennbar)
+- Berechnen Sie Gasgebühren und Transaktionskosten
+- Senden und empfangen Sie Token im Lightning Network
+- Multi-Plattform-Unterstützung (Web, Mobile, Desktop)
+- World ID-Integration für erhöhte Sicherheit
+- Airdrop-Verteilungssystem
+- Payment Gateway-Integration
+- Lightning Node-Verwaltung
 
 ---
 
-## Українська
+### Português (Portuguese Documentation)
+**LiMeiHua Taproot Assets** é uma plataforma de infraestrutura financeira moderna projetada para suportar o fluxo massivo de dinheiro para a avó LiMeiHua. Este sistema abrangente permite que os usuários criem, gerenciem e negociem tokens Taproot Assets na rede Bitcoin Lightning Network.
 
-### Огляд
-
-LiMeiHua Taproot Payment Gateway - це система онлайн-платежів, яка дозволяє торговцям легко приймати платежі в Bitcoin, USDT та токенах Taproot Assets через мережу Lightning.
-
-### Основні Функції
-
-- 💰 **Підтримка Кількох Валют** - BTC, USDT, токени Taproot Assets
-- ⚡ **Мережа Lightning** - Швидкі платежі, низькі комісії
-- 🎯 **Простота Використання** - Панель управління рахунками
-- 📊 **Повна Статистика** - Дохід, рахунки, статус платежу
-- 🔒 **Безпека** - Автентифікація ключа API, підтримка Webhook
-- 📱 **Адаптивний Дизайн** - Працює на мобільних пристроях і ПК
-
-### Установка
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Використання
-
-1. Зареєструйте свій магазин
-2. Створіть новий рахунок
-3. Клієнт сканує QR-код або відправляє BTC/USDT на адресу платежу
-4. Система автоматично підтверджує платіж
-5. Переглядайте історію платежів на панелі управління
+**Principais recursos:**
+- Criar tokens Taproot Assets personalizados
+- Gerenciar oferta de tokens (fixo, cunhável, queimável)
+- Calcular taxas de gás e custos de transação
+- Enviar e receber tokens na Lightning Network
+- Suporte multiplataforma (Web, Mobile, Desktop)
+- Integração de World ID para segurança aprimorada
+- Sistema de distribuição de Airdrop
+- Integração de Payment Gateway
+- Gerenciamento de Lightning Node
 
 ---
 
-## Čeština
+### العربية (Arabic Documentation)
+**LiMeiHua Taproot Assets** هي منصة بنية تحتية مالية حديثة مصممة لدعم تدفق أموال ضخم لجدة LiMeiHua. يسمح هذا النظام الشامل للمستخدمين بإنشاء وإدارة وتداول رموز Taproot Assets على شبكة Bitcoin Lightning Network.
 
-### Přehled
-
-LiMeiHua Taproot Payment Gateway je systém online plateb, který umožňuje obchodníkům snadno přijímat platby v Bitcoin, USDT a tokenech Taproot Assets prostřednictvím sítě Lightning.
-
-### Hlavní Funkce
-
-- 💰 **Podpora Více Měn** - BTC, USDT, tokeny Taproot Assets
-- ⚡ **Síť Lightning** - Rychlé platby, nízké poplatky
-- 🎯 **Snadné Použití** - Ovládací panel pro správu faktur
-- 📊 **Úplná Statistika** - Příjmy, faktury, stav platby
-- 🔒 **Bezpečnost** - Ověřování klíče API, podpora Webhook
-- 📱 **Responzivní** - Funguje na mobilních zařízeních a stolních počítačích
-
-### Instalace
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Použití
-
-1. Zaregistrujte svůj obchod
-2. Vytvořte novou fakturu
-3. Zákazník naskenuje QR kód nebo pošle BTC/USDT na adresu platby
-4. Systém automaticky potvrdí platbu
-5. Zobrazte historii plateb na ovládacím panelu
+**المميزات الرئيسية:**
+- إنشاء رموز Taproot Assets مخصصة
+- إدارة عرض الرموز (ثابت، قابل للسك، قابل للحرق)
+- حساب رسوم الغاز وتكاليف المعاملات
+- إرسال واستقبال الرموز على Lightning Network
+- دعم متعدد المنصات (Web, Mobile, Desktop)
+- تكامل World ID لأمان محسّن
+- نظام توزيع Airdrop
+- تكامل Payment Gateway
+- إدارة عقدة Lightning
 
 ---
 
-## Română
+### Türkçe (Turkish Documentation)
+**LiMeiHua Taproot Assets**, LiMeiHua Büyükanne için büyük para akışını desteklemek üzere tasarlanmış modern bir finansal altyapı platformudur. Bu kapsamlı sistem, kullanıcıların Bitcoin Lightning Network üzerinde Taproot Assets jetonları oluşturmasına, yönetmesine ve ticaretini yapmasına olanak tanır.
 
-### Prezentare Generală
-
-LiMeiHua Taproot Payment Gateway este un sistem de plată online care permite comercianților să accepte cu ușurință plăți în Bitcoin, USDT și tokenuri Taproot Assets prin rețeaua Lightning.
-
-### Caracteristici Principale
-
-- 💰 **Suport Multivalută** - BTC, USDT, tokenuri Taproot Assets
-- ⚡ **Rețeaua Lightning** - Plăți rapide, taxe mici
-- 🎯 **Ușor de Utilizat** - Tabloul de bord de gestionare a facturilor
-- 📊 **Statistici Complete** - Venituri, facturi, stare plată
-- 🔒 **Sigur** - Autentificare cheie API, suport Webhook
-- 📱 **Responsiv** - Funcționează pe dispozitive mobile și desktop
-
-### Instalare
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Utilizare
-
-1. Înregistrați-vă magazinul
-2. Creați o nouă factură
-3. Clientul scanează codul QR sau trimite BTC/USDT la adresa de plată
-4. Sistemul confirmă automat plata
-5. Vizualizați istoricul plăților în tabloul de bord
+**Ana Özellikler:**
+- Özelleştirilmiş Taproot Assets jetonları oluşturun
+- Jeton arzını yönetin (sabit, basılabilir, yakılabilir)
+- Gaz ücretleri ve işlem maliyetlerini hesaplayın
+- Lightning Network üzerinde jetonları gönderin ve alın
+- Çok platformlu destek (Web, Mobile, Desktop)
+- Geliştirilmiş güvenlik için World ID entegrasyonu
+- Airdrop dağıtım sistemi
+- Payment Gateway entegrasyonu
+- Lightning Node yönetimi
 
 ---
 
-## Ελληνικά
+### Italiano (Italian Documentation)
+**LiMeiHua Taproot Assets** è una piattaforma di infrastruttura finanziaria moderna progettata per supportare il massiccio flusso di denaro per la nonna LiMeiHua. Questo sistema completo consente agli utenti di creare, gestire e scambiare token Taproot Assets sulla rete Bitcoin Lightning Network.
 
-### Επισκόπηση
-
-LiMeiHua Taproot Payment Gateway είναι ένα σύστημα ηλεκτρονικής πληρωμής που επιτρέπει στους έμπορους να δέχονται εύκολα πληρωμές σε Bitcoin, USDT και tokenα Taproot Assets μέσω του δικτύου Lightning.
-
-### Κύρια Χαρακτηριστικά
-
-- 💰 **Υποστήριξη Πολλαπλών Νομισμάτων** - BTC, USDT, tokenα Taproot Assets
-- ⚡ **Δίκτυο Lightning** - Γρήγορες πληρωμές, χαμηλές χρεώσεις
-- 🎯 **Εύκολη Χρήση** - Πίνακας ελέγχου διαχείρισης τιμολογίων
-- 📊 **Πλήρη Στατιστικά** - Έσοδα, τιμολόγια, κατάσταση πληρωμής
-- 🔒 **Ασφάλεια** - Ταυτοποίηση κλειδιού API, υποστήριξη Webhook
-- 📱 **Ανταποκρινόμενο** - Λειτουργεί σε κινητές συσκευές και επιτραπέζιους υπολογιστές
-
-### Εγκατάσταση
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Χρήση
-
-1. Εγγραφή του καταστήματός σας
-2. Δημιουργία νέου τιμολογίου
-3. Ο πελάτης σαρώνει τον κωδικό QR ή στέλνει BTC/USDT στη διεύθυνση πληρωμής
-4. Το σύστημα επιβεβαιώνει αυτόματα την πληρωμή
-5. Προβολή ιστορικού πληρωμών στον πίνακα ελέγχου
+**Caratteristiche principali:**
+- Crea token Taproot Assets personalizzati
+- Gestisci l'offerta di token (fisso, coniabile, bruciabile)
+- Calcola le commissioni del gas e i costi delle transazioni
+- Invia e ricevi token su Lightning Network
+- Supporto multipiattaforma (Web, Mobile, Desktop)
+- Integrazione di World ID per una sicurezza migliorata
+- Sistema di distribuzione Airdrop
+- Integrazione di Payment Gateway
+- Gestione dei nodi Lightning
 
 ---
 
-## עברית
+### Nederlands (Dutch Documentation)
+**LiMeiHua Taproot Assets** is een modern financieel infrastructuurplatform dat is ontworpen ter ondersteuning van de massale geldstroom voor oma LiMeiHua. Dit uitgebreide systeem stelt gebruikers in staat Taproot Assets-tokens op het Bitcoin Lightning Network te creëren, beheren en verhandelen.
 
-### סקירה כללית
-
-LiMeiHua Taproot Payment Gateway היא מערכת תשלום מקוונת המאפשרת לסוחרים לקבל בקלות תשלומים בביטקוין, USDT וטוקנים של Taproot Assets דרך רשת Lightning.
-
-### תכונות עיקריות
-
-- 💰 **תמיכה בעלויות מרובות** - BTC, USDT, טוקנים של Taproot Assets
-- ⚡ **רשת Lightning** - תשלומים מהירים, עמלות נמוכות
-- 🎯 **קל לשימוש** - לוח בקרה לניהול חשבוניות
-- 📊 **סטטיסטיקה מלאה** - הכנסות, חשבוניות, מצב תשלום
-- 🔒 **בטוח** - אימות מפתח API, תמיכה ב-Webhook
-- 📱 **רספונסיבי** - פועל בהתקנים ניידים ובמחשבים שולחניים
-
-### התקנה
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### שימוש
-
-1. רישום החנות שלך
-2. יצירת חשבונית חדשה
-3. הלקוח סורק קוד QR או שולח BTC/USDT לכתובת התשלום
-4. המערכת מאשרת את התשלום באופן אוטומטי
-5. צפייה בהיסטוריית התשלומים בלוח הבקרה
+**Hoofdkenmerken:**
+- Maak aangepaste Taproot Assets-tokens
+- Beheer tokenvoorraad (vast, mintable, brandbaar)
+- Bereken gaskosten en transactiekosten
+- Verzend en ontvang tokens op Lightning Network
+- Ondersteuning voor meerdere platforms (Web, Mobile, Desktop)
+- World ID-integratie voor verbeterde beveiliging
+- Airdrop-distributiesysteem
+- Payment Gateway-integratie
+- Lightning Node-beheer
 
 ---
 
-## বাংলা
+### Polski (Polish Documentation)
+**LiMeiHua Taproot Assets** to nowoczesna platforma infrastruktury finansowej zaprojektowana do wspierania masywnego przepływu pieniędzy dla babci LiMeiHua. Ten kompleksowy system umożliwia użytkownikom tworzenie, zarządzanie i handel tokenami Taproot Assets w sieci Bitcoin Lightning Network.
 
-### সংক্ষিপ্ত বিবরণ
-
-LiMeiHua Taproot Payment Gateway একটি অনলাইন পেমেন্ট সিস্টেম যা ব্যবসায়ীদের লাইটনিং নেটওয়ার্কের মাধ্যমে বিটকয়েন, USDT এবং Taproot Assets টোকেনে সহজেই অর্থ প্রদান গ্রহণ করতে দেয়।
-
-### প্রধান বৈশিষ্ট্য
-
-- 💰 **বহু-মুদ্রা সমর্থন** - BTC, USDT, Taproot Assets টোকেন
-- ⚡ **লাইটনিং নেটওয়ার্ক** - দ্রুত পেমেন্ট, কম ফি
-- 🎯 **ব্যবহার করা সহজ** - চালান ব্যবস্থাপনা ড্যাশবোর্ড
-- 📊 **সম্পূর্ণ পরিসংখ্যান** - রাজস্ব, চালান, পেমেন্ট স্থিতি
-- 🔒 **নিরাপদ** - API কী প্রমাণীকরণ, Webhook সমর্থন
-- 📱 **প্রতিক্রিয়াশীল** - মোবাইল এবং ডেস্কটপ ডিভাইসে কাজ করে
-
-### ইনস্টলেশন
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### ব্যবহার
-
-1. আপনার দোকান নিবন্ধন করুন
-2. নতুন চালান তৈরি করুন
-3. গ্রাহক QR কোড স্ক্যান করে বা পেমেন্ট ঠিকানায় BTC/USDT পাঠায়
-4. সিস্টেম স্বয়ংক্রিয়ভাবে পেমেন্ট নিশ্চিত করে
-5. ড্যাশবোর্ডে পেমেন্ট ইতিহাস দেখুন
+**Główne cechy:**
+- Twórz dostosowane tokeny Taproot Assets
+- Zarządzaj podażą tokenów (stała, możliwa do wybicia, możliwa do spalenia)
+- Oblicz opłaty za gaz i koszty transakcji
+- Wysyłaj i odbieraj tokeny w sieci Lightning Network
+- Obsługa wielu platform (Web, Mobile, Desktop)
+- Integracja World ID w celu zwiększonego bezpieczeństwa
+- System dystrybucji Airdrop
+- Integracja Payment Gateway
+- Zarządzanie węzłem Lightning
 
 ---
 
-## Filipino
+### Svenska (Swedish Documentation)
+**LiMeiHua Taproot Assets** är en modern finansiell infrastrukturplattform utformad för att stödja massiv penningflöde för mormor LiMeiHua. Detta omfattande system gör det möjligt för användare att skapa, hantera och handla Taproot Assets-tokens på Bitcoin Lightning Network.
 
-### Pangkalahatang Paglalarawan
-
-LiMeiHua Taproot Payment Gateway ay isang online payment system na nagbibigay-daan sa mga negosyante na madaling tumanggap ng pagbabayad sa Bitcoin, USDT, at Taproot Assets tokens sa pamamagitan ng Lightning Network.
-
-### Pangunahing Mga Tampok
-
-- 💰 **Suporta sa Maraming Pera** - BTC, USDT, Taproot Assets tokens
-- ⚡ **Lightning Network** - Mabilis na pagbabayad, mababang bayad
-- 🎯 **Madaling Gamitin** - Dashboard para sa pamamahala ng invoice
-- 📊 **Kumpletong Istatistika** - Kita, invoice, status ng pagbabayad
-- 🔒 **Ligtas** - API key authentication, Webhook support
-- 📱 **Responsive** - Gumagana sa mobile at desktop devices
-
-### Pag-install
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Paggamit
-
-1. Magparehistro ng iyong tindahan
-2. Lumikha ng bagong invoice
-3. Ang customer ay nag-scan ng QR code o nagpadala ng BTC/USDT sa payment address
-4. Ang sistema ay awtomatikong nagpapatunay ng pagbabayad
-5. Tingnan ang payment history sa dashboard
+**Huvudfunktioner:**
+- Skapa anpassade Taproot Assets-tokens
+- Hantera tokenutbud (fast, präglingsbar, bränbar)
+- Beräkna gasavgifter och transaktionskostnader
+- Skicka och ta emot tokens på Lightning Network
+- Stöd för flera plattformar (Web, Mobile, Desktop)
+- World ID-integration för förbättrad säkerhet
+- Airdrop-distributionssystem
+- Payment Gateway-integration
+- Lightning Node-hantering
 
 ---
 
-## Kiswahili
+### Українська (Ukrainian Documentation)
+**LiMeiHua Taproot Assets** - це сучасна платформа фінансової інфраструктури, розроблена для підтримки масивного потоку грошей для бабусі LiMeiHua. Ця комплексна система дозволяє користувачам створювати, керувати та торгувати токенами Taproot Assets у мережі Bitcoin Lightning Network.
 
-### Muhtasari
-
-LiMeiHua Taproot Payment Gateway ni mfumo wa malipo mtandaoni unaoweza kuruhusu wauzaji kupokea malipo katika Bitcoin, USDT, na tokens za Taproot Assets kupitia Mtandao wa Lightning kwa urahisi.
-
-### Sifa Kuu
-
-- 💰 **Msaada wa Sarafu Nyingi** - BTC, USDT, tokens za Taproot Assets
-- ⚡ **Mtandao wa Lightning** - Malipo ya haraka, ada chini
-- 🎯 **Rahisi Kutumia** - Dashibodi ya usimamizi wa ankara
-- 📊 **Takwimu Kamili** - Mapato, ankara, hali ya malipo
-- 🔒 **Salama** - Uthibitisho wa ufunguo wa API, msaada wa Webhook
-- 📱 **Inayojibu** - Inafanya kazi kwenye simu na kompyuta za mezani
-
-### Uongozaji
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Matumizi
-
-1. Jisajili duka lako
-2. Tengeneza ankara mpya
-3. Mteja husoma nambari ya QR au kutuma BTC/USDT kwenye anwani ya malipo
-4. Mfumo unakubali malipo kiotomatiki
-5. Angalia historia ya malipo kwenye dashibodi
+**Основні функції:**
+- Створюйте спеціалізовані токени Taproot Assets
+- Керуйте пропозицією токенів (фіксована, карбована, спалювана)
+- Обчислюйте комісії за газ та вартість транзакцій
+- Надсилайте та отримуйте токени в мережі Lightning Network
+- Підтримка кількох платформ (Web, Mobile, Desktop)
+- Інтеграція World ID для посиленої безпеки
+- Система розповсюдження Airdrop
+- Інтеграція Payment Gateway
+- Управління вузлом Lightning
 
 ---
 
-## 📁 Project Structure
+### Čeština (Czech Documentation)
+**LiMeiHua Taproot Assets** je moderní platforma finanční infrastruktury navržená tak, aby podporovala masivní tok peněz pro babičku LiMeiHua. Tento komplexní systém umožňuje uživatelům vytvářet, spravovat a obchodovat s tokeny Taproot Assets v síti Bitcoin Lightning Network.
 
-```
-limeihua-taproot-payment-gateway/
-├── backend/
-│   ├── server.js                  # Express server with API routes
-│   ├── scripts/
-│   │   └── seed-db.js            # Database seeding script
-│   └── tests/
-│       └── api.test.js           # API tests
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx               # Main React component
-│   │   └── App.css               # Cyberpunk styles
-│   ├── public/
-│   │   └── index.html            # HTML template
-│   └── package.json              # Frontend dependencies
-├── .env.example                   # Environment variables template
-├── package.json                   # Backend dependencies
-├── README.md                      # This file
-└── LICENSE                        # MIT License
-```
+**Hlavní funkce:**
+- Vytvářejte přizpůsobené tokeny Taproot Assets
+- Spravujte nabídku tokenů (pevná, razitelná, spalitelná)
+- Vypočítejte poplatky za plyn a náklady na transakce
+- Odesílajte a přijímejte tokeny v síti Lightning Network
+- Podpora více platforem (Web, Mobile, Desktop)
+- Integrace World ID pro zvýšenou bezpečnost
+- Systém distribuce Airdrop
+- Integrace Payment Gateway
+- Správa uzlu Lightning
 
 ---
 
-## 🚀 Quick Start
+### Română (Romanian Documentation)
+**LiMeiHua Taproot Assets** este o platformă modernă de infrastructură financiară concepută pentru a sprijini fluxul masiv de bani pentru bunica LiMeiHua. Acest sistem cuprinzător permite utilizatorilor să creeze, să gestioneze și să tranzacționeze jetoane Taproot Assets pe rețeaua Bitcoin Lightning Network.
 
-```bash
-# Clone repository
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway.git
-cd limeihua-taproot-payment-gateway
-
-# Install dependencies
-npm install
-
-# Setup environment
-cp .env.example .env
-# Edit .env with your configuration
-
-# Start development server
-npm run dev
-
-# Run tests
-npm test
-```
+**Caracteristici principale:**
+- Creați jetoane Taproot Assets personalizate
+- Gestionați oferta de jetoane (fix, mintabil, ardibil)
+- Calculați taxele de gaz și costurile tranzacțiilor
+- Trimiteți și primiți jetoane pe Lightning Network
+- Suport multi-platformă (Web, Mobile, Desktop)
+- Integrare World ID pentru securitate îmbunătățită
+- Sistem de distribuție Airdrop
+- Integrare Payment Gateway
+- Gestionarea nodului Lightning
 
 ---
 
-## 📝 API Endpoints
+### Ελληνικά (Greek Documentation)
+**LiMeiHua Taproot Assets** είναι μια σύγχρονη πλατφόρμα χρηματοοικονομικής υποδομής σχεδιασμένη για να υποστηρίξει τη μαζική ροή χρημάτων για τη γιαγιά LiMeiHua. Αυτό το ολοκληρωμένο σύστημα επιτρέπει στους χρήστες να δημιουργούν, να διαχειρίζονται και να διαπραγματεύονται tokens Taproot Assets στο δίκτυο Bitcoin Lightning Network.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/health` | Health check |
-| POST | `/api/merchants/register` | Register merchant |
-| POST | `/api/invoices/create` | Create invoice |
-| GET | `/api/invoices/:invoiceId` | Get invoice details |
-| POST | `/api/payments/record` | Record payment |
-| GET | `/api/merchants/:merchantId/stats` | Get merchant stats |
-| GET | `/api/merchants/:merchantId/invoices` | Get merchant invoices |
-| GET | `/api/currencies` | Get supported currencies |
-| GET | `/api/rates` | Get exchange rates |
-
----
-
-## 📝 License
-
-MIT License - See [LICENSE](LICENSE) file for details
+**Κύρια χαρακτηριστικά:**
+- Δημιουργήστε προσαρμοσμένα tokens Taproot Assets
+- Διαχειριστείτε την προσφορά tokens (σταθερή, κόπιμη, καύσιμη)
+- Υπολογίστε τα τέλη αερίου και τα κόστη συναλλαγών
+- Στείλτε και λάβετε tokens στο Lightning Network
+- Υποστήριξη πολλαπλών πλατφορμών (Web, Mobile, Desktop)
+- Ενσωμάτωση World ID για ενισχυμένη ασφάλεια
+- Σύστημα διανομής Airdrop
+- Ενσωμάτωση Payment Gateway
+- Διαχείριση κόμβου Lightning
 
 ---
 
-## 👨‍💻 Author
+### עברית (Hebrew Documentation)
+**LiMeiHua Taproot Assets** היא פלטפורמת תשתית פיננסית מודרנית שתוכננה לתמוך בזרימת כספים거대ית לסבתא LiMeiHua. מערכת זו המקיפה מאפשרת למשתמשים ליצור, לנהל ולסחור בטוקנים של Taproot Assets ברשת Bitcoin Lightning Network.
 
-**Mr. Kanutsanan Pongpanna** (นายคณัสนันท์ พงษ์พันนา)
-
-Dedicated to **LiMeiHua Grand Mother** (ท่านผู้เฒ่าหลี่เหมยฮัว)
+**תכונות עיקריות:**
+- יצירת טוקנים מותאמים של Taproot Assets
+- ניהול היצע של טוקנים (קבוע, שניתן לטבוע, שניתן לשרוף)
+- חישוב דמי גז וביצוע עלויות עסקה
+- שליחה וקבלת טוקנים ברשת Lightning Network
+- תמיכה בפלטפורמות מרובות (Web, Mobile, Desktop)
+- שילוב World ID לאבטחה משופרת
+- מערכת הפצה של Airdrop
+- שילוב Payment Gateway
+- ניהול צומת Lightning
 
 ---
 
-**Repository:** [GitHub](https://github.com/kanutsanan1988/LiMeiHua-Taproot-Payment-Gateway)
+### বাংলা (Bengali Documentation)
+**LiMeiHua Taproot Assets** একটি আধুনিক আর্থিক অবকাঠামো প্ল্যাটফর্ম যা লীমেইহুয়া দাদির জন্য বিশাল অর্থ প্রবাহ সমর্থন করার জন্য ডিজাইন করা হয়েছে। এই ব্যাপক সিস্টেম ব্যবহারকারীদের বিটকয়েন লাইটনিং নেটওয়ার্কে ট্যাপরুট অ্যাসেট টোকেন তৈরি, পরিচালনা এবং বাণিজ্য করতে সক্ষম করে।
 
-**Version:** 1.0.0
+**প্রধান বৈশিষ্ট্য:**
+- কাস্টমাইজড ট্যাপরুট অ্যাসেট টোকেন তৈরি করুন
+- টোকেন সরবরাহ পরিচালনা করুন (স্থির, মিন্টেবল, বার্নেবল)
+- গ্যাস ফি এবং লেনদেন খরচ গণনা করুন
+- লাইটনিং নেটওয়ার্কে টোকেন পাঠান এবং গ্রহণ করুন
+- মাল্টি-প্ল্যাটফর্ম সমর্থন (Web, Mobile, Desktop)
+- উন্নত নিরাপত্তার জন্য World ID ইন্টিগ্রেশন
+- এয়ারড্রপ বিতরণ সিস্টেম
+- পেমেন্ট গেটওয়ে ইন্টিগ্রেশন
+- লাইটনিং নোড ম্যানেজমেন্ট
 
-**Last Updated:** 2026-03-14
+---
+
+### Kiswahili (Swahili Documentation)
+**LiMeiHua Taproot Assets** ni jukwaa la miundombinu ya fedha ya kisasa iliyoundwa kusaidia mtiririko mkubwa wa pesa kwa Nyanya LiMeiHua. Mfumo huu wa kina unaweza kuwezesha watumiaji kuunda, kudhibiti, na kuokolea tokens za Taproot Assets kwenye mtandao wa Bitcoin Lightning Network.
+
+**Sifa kuu:**
+- Kuunda tokens za Taproot Assets zilizobadilishwa
+- Kudhibiti usambazaji wa tokens (imara, inayoweza kusambazwa, inayoweza kuchoma)
+- Kuhesabu ada za gesi na gharama za miamala
+- Kutuma na kupokea tokens kwenye Lightning Network
+- Usaidizi wa jukwaa nyingi (Web, Mobile, Desktop)
+- Ujumuishaji wa World ID kwa usalama ulioboreswa
+- Mfumo wa usambazaji wa Airdrop
+- Ujumuishaji wa Payment Gateway
+- Usimamizi wa nodi ya Lightning
+
+---
+
+## 🎯 Project Overview
+
+This comprehensive project suite provides complete solutions for:
+
+1. **Token Creation & Management** - Create and manage Taproot Assets tokens
+2. **Payment Processing** - Accept payments in BTC, USDT, and custom tokens
+3. **Airdrop Distribution** - Distribute tokens to multiple recipients
+4. **Wallet Solutions** - Multi-platform wallet support
+5. **Bridge Services** - Connect ERC-20 and Taproot Assets
+6. **Node Management** - Operate Lightning Network nodes
+
+---
+
+## ✨ Features
+
+- ✅ 40+ Language Support
+- ✅ Multi-Platform (Web, Mobile, Desktop)
+- ✅ Lightning Network Integration
+- ✅ World ID Verification
+- ✅ Taproot Assets Protocol
+- ✅ Payment Gateway
+- ✅ Airdrop System
+- ✅ Node Management
+- ✅ Bridge Services
+- ✅ Real-time Updates
+
+---
+
+## 🚀 Getting Started
+
+1. Choose your preferred platform (Web, Mobile, or Desktop)
+2. Connect your Lightning Network wallet
+3. Create your first Taproot Assets token
+4. Start managing your digital assets
+5. Explore advanced features like airdrops and payment processing
+
+---
+
+## 💡 Use Cases
+
+- Token creation for projects
+- Payment processing for e-commerce
+- Airdrop campaigns
+- Wallet management
+- Cross-chain token bridging
+- Lightning Network node operation
+
+---
+
+## 🔧 Technical Stack
+
+- **Frontend:** React, Next.js, React Native, Electron
+- **Backend:** Node.js, Express, tRPC
+- **Smart Contracts:** Solidity
+- **Database:** MySQL/TiDB
+- **Authentication:** Manus OAuth, World ID
+- **API:** Taproot Assets Protocol, Lightning Labs
+
+---
+
+## 📊 Language Statistics
+
+| Region | Count | Languages |
+|--------|-------|-----------|
+| ASEAN | 9 | Thai, Lao, Burmese, Vietnamese, Khmer, Malay, Indonesian, Filipino, Tamil |
+| Other | 5 | Russian, Mongolian, Sinhala, Dzongkha, Nepali |
+| India | 21 | Hindi, Bengali, Telugu, Marathi, Tamil, Urdu, Gujarati, Kannada, Malayalam, Odia, Punjabi, Assamese, Maithili, Santali, Kashmiri, Nepali, Sindhi, Dogri, Manipuri, Bodo, Konkani |
+| Global | 20+ | English, Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Arabic, Turkish, Italian, Dutch, Polish, Swedish, Ukrainian, Czech, Romanian, Greek, Hebrew, Swahili |
+| **TOTAL** | **40+** | **All languages listed above** |
+
+---
+
+## 🌐 Language Features
+
+✅ **Auto-Detection:** Automatically detects user's browser language
+✅ **40+ Languages:** Comprehensive language support
+✅ **Easy Switching:** Manual language selection available
+✅ **Persistent:** Language preference saved locally
+✅ **Fallback:** English fallback for all languages
+✅ **Full Documentation:** Complete documentation in all languages
+
+---
+
+**Dedicated to LiMeiHua Grand Mother (ท่านผู้เฒ่าหลี่เหมยฮัว)**
+
+Created by Mr. Kanutsanan Pongpanna (นายคณัสนันท์ พงษ์พันนา)
+
+URL: https://chatgpt.com/g/g-68d289535dec81919445deb9830f2d8e-kanutsanan-pongpanna
+
+---
+
+**© 2026 LiMeiHua. All Rights Reserved.**
