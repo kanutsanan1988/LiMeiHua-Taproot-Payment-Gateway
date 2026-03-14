@@ -1,0 +1,41 @@
+{
+  "name": "limeihua-taproot-payment-gateway",
+  "version": "1.0.0",
+  "description": "Lightning Network Payment Gateway for Taproot Assets and BTC/USDT",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "start": "node backend/server.js",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "node --test backend/tests/*.test.js",
+    "seed": "node backend/scripts/seed-db.js"
+  },
+  "keywords": [
+    "payment-gateway",
+    "lightning-network",
+    "taproot-assets",
+    "bitcoin",
+    "usdt",
+    "cryptocurrency"
+  ],
+  "author": "Mr. Kanutsanan Pongpanna",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "uuid": "^9.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "qrcode": "^1.5.3",
+    "date-fns": "^2.30.0",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
